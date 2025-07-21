@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* React Calendar Dark Mode Styles */
+.react-calendar-dark {
+  background-color: #374151; /* darkcard */
+  border-color: #4B5563; /* gray-600 */
+  color: #E5E7EB; /* gray-200 */
+}
+
+.react-calendar-dark .react-calendar__navigation button {
+  color: #E5E7EB; /* gray-200 */
+}
+
+.react-calendar-dark .react-calendar__month-view__weekdays__weekday abbr {
+  color: #9CA3AF; /* gray-400 */
+}
+
+.react-calendar-dark .react-calendar__tile {
+  color: #E5E7EB; /* gray-200 */
+}
+
+.react-calendar-dark .react-calendar__tile--now {
+  background: #4B5563; /* gray-600 */
+}
+
+.react-calendar-dark .react-calendar__tile--active {
+  background: #3B82F6; /* primary */
+  color: white;
+}
+
+.react-calendar-dark .react-calendar__tile--range {
+  background: #10B981; /* accent */
+  color: white;
+}
+
+.react-calendar-dark .react-calendar__tile--rangeStart,
+.react-calendar-dark .react-calendar__tile--rangeEnd {
+  background: #3B82F6; /* primary */
+  color: white;
+}
+
+.react-calendar-dark .react-calendar__tile:enabled:hover,
+.react-calendar-dark .react-calendar__tile:enabled:focus {
+  background-color: #4B5563; /* gray-600 */
+}
+
+.react-calendar-dark .react-calendar__navigation button:enabled:hover,
+.react-calendar-dark .react-calendar__navigation button:enabled:focus {
+  background-color: #4B5563; /* gray-600 */
+}
