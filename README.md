@@ -1,86 +1,93 @@
-HostelFlow 🏨
-A modern, responsive hostel booking management system built with React.js and Node.js. HostelFlow provides a comprehensive admin dashboard for managing room bookings, viewing analytics, and tracking occupancy rates.
-Show Image
-✨ Features
-🎯 Core Functionality
+# 🏨 HostelFlow
 
-User Authentication - Secure login system with JWT tokens
-Room Booking Management - Add, edit, and delete room bookings
-Search & Filter - Advanced search functionality for bookings
-Analytics Dashboard - Visual charts showing booking trends and occupancy rates
-Calendar View - Interactive calendar showing room availability
-Data Export - Export booking data to CSV format
+**HostelFlow** is a modern, responsive hostel booking management system built using **React.js** and **Node.js**. It includes a powerful admin dashboard for managing room bookings, tracking occupancy, and visualizing booking analytics in real-time.
 
-🎨 User Experience
+![HostelFlow Screenshot](https://yourimageurl.com/preview.png) <!-- Replace with actual image link -->
 
-Dark/Light Mode - Toggle between themes for better user experience
-Responsive Design - Mobile-first design that works on all devices
-Modern UI - Glassmorphism effects and smooth animations
-Avatar System - Auto-generated user avatars with initials
-Flag Integration - Country flags for guest nationalities
+---
 
-📊 Analytics & Reporting
+## ✨ Features
 
-Booking Frequency Charts - Bar charts showing daily booking patterns
-Occupancy Rate Visualization - Pie charts displaying room utilization
-Real-time Data - Live updates of booking information
-Export Capabilities - Download reports in CSV format
+### 🎯 Core Functionality
+- 🔐 **User Authentication** – Secure login with JWT tokens
+- 🛏️ **Room Booking Management** – Add, edit, and delete bookings
+- 🔍 **Search & Filter** – Advanced search for quick access to booking info
+- 📊 **Analytics Dashboard** – View trends and occupancy rates via charts
+- 📆 **Calendar View** – Interactive view of room availability
+- 📤 **Data Export** – Export booking data to CSV
 
-🚀 Tech Stack
-Frontend
+### 🎨 User Experience
+- 🌗 **Dark/Light Mode** – Toggle themes for better UX
+- 📱 **Responsive Design** – Works on all screen sizes
+- 💎 **Modern UI** – Glassmorphism effects with smooth animations
+- 👤 **Avatar System** – Auto-generated avatars with initials
+- 🏳️ **Flag Integration** – Country flags for guest nationalities
 
-React 18 - Modern React with hooks
-React Router - Client-side routing
-Chart.js - Interactive charts and data visualization
-Tailwind CSS - Utility-first CSS framework
-Axios - HTTP client for API calls
-React Calendar - Calendar component for date management
+### 📊 Analytics & Reporting
+- 📈 **Booking Frequency Charts** – Daily booking trends
+- 🧮 **Occupancy Rate Visualization** – Pie charts for room usage
+- 🔄 **Real-time Data** – Auto-updating booking information
+- 📎 **CSV Export** – Download reports easily
 
-Backend (Required)
+---
 
-Node.js - Runtime environment
-Express.js - Web framework
-MongoDB - NoSQL database
-JWT - JSON Web Tokens for authentication
-Mongoose - MongoDB object modeling
+## 🚀 Tech Stack
 
-🛠️ Installation & Setup
-Prerequisites
+### Frontend
+- [React 18](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [Chart.js](https://www.chartjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Axios](https://axios-http.com/)
+- [React Calendar](https://www.npmjs.com/package/react-calendar)
 
-Node.js (v14 or higher)
-npm or yarn
-MongoDB (local or cloud instance)
+### Backend
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [JWT](https://jwt.io/)
 
-Frontend Setup
+---
 
-Clone the repository
-bashgit clone https://github.com/yourusername/hostelflow.git
+## 🛠️ Installation & Setup
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- MongoDB (local or cloud instance)
+
+### 📦 Frontend Setup
+
+```bash
+git clone https://github.com/yourusername/hostelflow.git
 cd hostelflow
-
-Install dependencies
-bashnpm install
-
-Start the development server
-bashnpm run dev
-
-Open your browser
+npm install
+npm run dev
 Navigate to http://localhost:5173
 
-Backend Setup (Required)
-The frontend expects a backend API running on http://localhost:5000. You'll need to set up:
+🧩 Backend Setup (Required)
+The frontend expects a backend at: http://localhost:5000
 
 API Endpoints:
 
-POST /api/auth/login - User authentication
-GET /api/bookings - Fetch all bookings
-POST /api/bookings - Create new booking
-PUT /api/bookings/:id - Update booking
-DELETE /api/bookings/:id - Delete booking
-GET /api/bookings/search - Search bookings
+POST /api/auth/login – Login
 
+GET /api/bookings – Fetch all bookings
 
-Database Schema:
-javascript// Booking model
+POST /api/bookings – Create a booking
+
+PUT /api/bookings/:id – Update a booking
+
+DELETE /api/bookings/:id – Delete a booking
+
+GET /api/bookings/search – Search bookings
+
+Booking Schema:
+
+javascript
+Copy
+Edit
 {
   roomNumber: String,
   name: String,
@@ -89,48 +96,55 @@ javascript// Booking model
   nationality: String,
   arrivalDate: Date
 }
-
 Authentication:
 
-JWT-based authentication
+JWT-based login
+
 Token stored in localStorage
-Protected routes with x-auth-token header
 
-
+Use x-auth-token header for protected routes
 
 📁 Project Structure
+pgsql
+Copy
+Edit
 hostelflow/
 ├── src/
 │   ├── components/
-│   │   ├── Analytics.jsx          # Analytics dashboard
-│   │   ├── Avatar.jsx            # User avatar component
-│   │   ├── BookRoom.jsx          # Room booking form
-│   │   ├── Bookings.jsx          # Bookings list view
-│   │   ├── Dashboard.jsx         # Main dashboard layout
-│   │   ├── EditBookingModal.jsx  # Edit booking modal
-│   │   ├── Login.jsx             # Login page
-│   │   ├── RoomCalendar.jsx      # Calendar view
-│   │   ├── PrivateRoute.jsx      # Route protection
-│   │   ├── SplashScreen.jsx      # Loading screen
-│   │   └── ThemeContext.jsx      # Theme management
-│   ├── App.jsx                   # Main app component
-│   ├── main.jsx                  # App entry point
-│   ├── index.css                 # Global styles
-│   └── App.css                   # Component styles
+│   │   ├── Analytics.jsx
+│   │   ├── Avatar.jsx
+│   │   ├── BookRoom.jsx
+│   │   ├── Bookings.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── EditBookingModal.jsx
+│   │   ├── Login.jsx
+│   │   ├── RoomCalendar.jsx
+│   │   ├── PrivateRoute.jsx
+│   │   ├── SplashScreen.jsx
+│   │   └── ThemeContext.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+│   └── App.css
 ├── public/
 ├── package.json
 └── README.md
 🎨 Themes & Styling
-HostelFlow supports both light and dark themes:
+Light and Dark Mode support
 
-Light Mode: Clean, professional appearance
-Dark Mode: Modern dark theme with glassmorphism effects
-Responsive: Mobile-first design approach
-Animations: Smooth transitions and hover effects
+Responsive mobile-first design
+
+Glassmorphism UI elements
+
+Smooth hover and transition animations
 
 📊 API Integration
-The application integrates with a REST API. Example API calls:
-javascript// Fetch bookings
+Example Usage:
+
+js
+Copy
+Edit
+// Fetch bookings
 const response = await axios.get('http://localhost:5000/api/bookings', {
   headers: { 'x-auth-token': token }
 });
@@ -140,66 +154,82 @@ const response = await axios.post('http://localhost:5000/api/bookings', bookingD
   headers: { 'x-auth-token': token }
 });
 🔐 Authentication
+JWT-based secure login
 
-JWT-based authentication system
-Tokens stored in localStorage
-Automatic redirect to login for unauthenticated users
-Protected routes using PrivateRoute component
+Token saved in localStorage
+
+Protected routes using <PrivateRoute /> component
+
+Auto redirect to login if unauthorized
 
 📱 Mobile Responsiveness
+Collapsible sidebar
 
-Mobile-first design approach
-Collapsible sidebar navigation
-Touch-friendly interface
-Optimized for tablets and smartphones
+Touch-friendly controls
+
+Fully functional on phones and tablets
 
 🚀 Deployment
-Frontend Deployment
-bash# Build for production
+Build & Deploy Frontend
+bash
+Copy
+Edit
 npm run build
-
-# Deploy to your preferred hosting service
-# (Vercel, Netlify, GitHub Pages, etc.)
+# Deploy 'dist/' folder to Vercel, Netlify, GitHub Pages, etc.
 Environment Variables
-Create a .env file for environment-specific configurations:
+Create a .env file:
+
+ini
+Copy
+Edit
 VITE_API_URL=http://localhost:5000
 🤝 Contributing
-
 Fork the repository
-Create your feature branch (git checkout -b feature/AmazingFeature)
-Commit your changes (git commit -m 'Add some AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
+
+Create your feature branch: git checkout -b feature/AmazingFeature
+
+Commit changes: git commit -m 'Add some AmazingFeature'
+
+Push to the branch: git push origin feature/AmazingFeature
+
 Open a Pull Request
 
 📋 TODO
-
  Add room categories and pricing
+
  Implement check-out functionality
- Add email notifications
- Integration with payment gateways
+
+ Email notifications for bookings
+
+ Payment gateway integration
+
  Multi-language support
- Advanced reporting features
- Guest communication system
+
+ Advanced reporting tools
+
+ Guest messaging system
 
 🐛 Known Issues
+Calendar component needs styling tweaks in dark mode
 
-Calendar component styling needs refinement in dark mode
-Mobile sidebar animation could be smoother
-Search functionality needs debouncing
+Mobile sidebar animation requires smoothing
+
+Search input lacks debounce
 
 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-👨‍💻 Author
-Your Name
+Licensed under the MIT License
 
-GitHub: @yourusername
-Email: your.email@example.com
+👨‍💻 Author
+Priyanshu Kumar
+GitHub: pk1519
+Email: priyanshu345kumar@gmail.com
 
 🙏 Acknowledgments
+React.js – UI library
 
-React.js community for excellent documentation
-Chart.js for powerful data visualization
-Tailwind CSS for rapid UI development
-All contributors who helped improve this project
+Chart.js – For data visualization
 
-## Contact me  --- priyanshu345kumar@gmail.com
+Tailwind CSS – For modern, responsive UI
+
+All contributors and the open-source community ❤️
+
